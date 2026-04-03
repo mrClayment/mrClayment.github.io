@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      width: 70%;
+      margin-right: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: #eee;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .delete {
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>To-Do App</h2>
+
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add</button>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script>
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const task = input.value;
+
+  if (task === "") {
+    alert("Please enter a task");
+    return;
+  }
+
+  const li = document.createElement("li");
+  li.innerHTML = `
+    ${task}
+    <span class="delete" onclick="deleteTask(this)">X</span>
+  `;
+
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+}
+
+function deleteTask(element) {
+  element.parentElement.remove();
+}
+</script>
+
+</body>
+</html>
