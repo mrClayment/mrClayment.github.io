@@ -1,107 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>My Portfolio</title>
+
   <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f0f2f5;
-    color: #333;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
 
-  header {
-    background: #1a0000;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-  }
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 36px;
-  }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-  header p {
-    margin-top: 10px;
-    font-size: 18px;
-  }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-  section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-  }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-  h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-  }
+    .skills span {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
 
-  .project {
-    background: white;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+    .buttons a {
+      display: inline-block;
+      margin: 8px 5px 0 0;
+      text-decoration: none;
+      color: white;
+      background: #007bff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
 
-  a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: #4facfe;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
+    .buttons a.code {
+      background: #28a745;
+    }
 
-  a:hover {
-    background: #00c6ff;
-  }
-</style>
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Hi, I'm Juan 👋</h1>
-    <p>Aspiring Web Developer</p>
-  </header>
+<header>
+  <h1>Your Name</h1>
+  <p>IT Graduate | Web Developer</p>
+</header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I am an IT graduate and I love building websites.</p>
-  </section>
+<section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+  <!-- ABOUT -->
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am an IT graduate passionate about building modern, responsive, and 
+      user-friendly web applications using HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap.
+    </p>
+  </div>
 
-  <section>
-    <h2>Projects</h2>
+  <!-- SKILLS -->
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>Bootstrap</span>
+  </div>
 
-    <div class="project">
-      <h3>To-Do App</h3>
-      <p>A simple task manager using JavaScript.</p>
+  <!-- PROJECTS -->
+  <h2>Projects</h2>
+
+  <!-- TO-DO APP -->
+  <div class="card">
+    <h3>To-Do App</h3>
+    <p>A simple and interactive task manager built using JavaScript.</p>
+    
+    <div class="buttons">
+      <a href="todo.html">Live Demo</a>
+      <a href="#" class="code">View Code</a>
     </div>
+  </div>
 
-    <div class="project">
-      <h3>Blog Website</h3>
-      <p>A basic blog layout using HTML & CSS.</p>
+  <!-- BLOG WEBSITE -->
+  <div class="card">
+    <h3>Blog Website</h3>
+    <p>A clean and responsive blog layout built using HTML and CSS.</p>
+    
+    <div class="buttons">
+      <a href="blog.html">Live Demo</a>
+      <a href="#" class="code">View Code</a>
     </div>
+  </div>
 
-  </section>
+  <!-- LOGIN SYSTEM -->
+  <div class="card">
+    <h3>Login System</h3>
+    <p>A simple login system built using PHP and MySQL.</p>
+    
+    <div class="buttons">
+      <a href="#">Live Demo</a>
+      <a href="#" class="code">View Code</a>
+    </div>
+  </div>
 
-  <section>
-    <h2>Contact</h2>
+  <!-- CONTACT -->
+  <h2>Contact</h2>
+  <div class="card">
     <p>Email: your@email.com</p>
-  </section>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 Your Name</p>
+</footer>
 
 </body>
 </html>
